@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도형서식</title>
+</head>
+<body>
+    <h3>도형 서식 폼 만들기</h3>
+    <hr>
+    <form action="https://search.naver.com/search.naver" target="_blank">
+        <fieldset> <legend>도형 서식 입력</legend>
+
+            <label for="linekind">선 종류<br></label><select id="linekind" name="linekind">
+                <option>선 없음</option>
+                <option>실선</option>
+                <option>점선</option>
+            </select>
+            <br><br>
+            <label for="linewidth">선 두께 </label>
+            <input id="linewidth" name="linewidth" type="number" min="0.0" max="10.0" step="0.5">
+            <br>
+            <label for="linecolor">선 색 </label>
+            <input id="linecolor" name="linecolor" type="color">
+            <br>
+            <label for="opacity">투명도 (0~100) </label>
+            <input id= "opacity" name="opacity" type="range" list="oplist" min="0.0" max="100.0" step="0.5">
+            <datalist id="oplist">
+                <option value="5">5</option>
+                <option value="50">50</option>
+                <option value="95">95</option>
+            </datalist>
+            <br><br>
+            <button type="submit">제출</button></fieldset> 
+    </form>
+    
+</body>
+</html>
