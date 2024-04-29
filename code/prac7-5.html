@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h2>배열 연습</h2>
+    <hr>
+    <script>
+        let names=new Array("wonson","jaemonlee","kitae","gracewhang")
+        
+        document.write("<p>이름: ")
+        /*for(let name of names){
+            document.write(name+' ');
+        }*/
+        
+        document.write(names.join(' ')+"</p>")
+        document.write("<p>가장 긴 이름: ");
+        document.write(names.reduce((a,e)=>a.length>e.length?a:e,names[0])+"</p>");
+        document.write("<p>가장 먼저 나오는 이름: ")
+        document.write(names.sort()[0]+"</p>")
+        document.write("<p>이름정렬: ")
+        document.write(names)
+    </script>
+</body>
+</html>
