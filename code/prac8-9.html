@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h3>ㄹ라면</h3>
+    <hr>
+    <ol type="A" style="background-color:yellowgreen">
+        <li>물 끓이기</li>
+
+    </ol>
+    <script>
+        let ol = document.querySelector('ol')
+        ol.onclick = function () {
+            let step = prompt("라면끓이는순서 ")
+            let li = document.createElement('li');
+            li.innerHtml = step;
+            ol.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>

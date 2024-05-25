@@ -7,6 +7,14 @@
 div { position : absolute; }
 img { position : absolute; }
 </style>
+<script>
+	function changeZindex(){
+		let imgArray = document.getElementsByTagName("img");
+		for(let j=0;j<imgs.length;j++){
+			imgs[j].style.zIndex=(parseInt{imgs[j].style.zIndex}+1)%4;
+		}
+	}
+</script>
 </head>
 <body>
 <h3>z-index 스타일 프로퍼티</h3>
