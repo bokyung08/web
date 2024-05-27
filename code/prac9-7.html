@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onmouseover=function(ev){
+            if(ev.target.tagName=toLowerCase()=="span"){
+                ev.target.style.textDecoration="underline";
+            }
+        
+        }
+        window.onmouseout=function(ev){
+            if(ev.target.tagName=toLowerCase()=="span"){
+                ev.target.style.textDecoration="Nan";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <span>span1</span>이 있고요
+        <span>span2</span>도있고
+        나머지 
+    </p>
+</body>
+</html>

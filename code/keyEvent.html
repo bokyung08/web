@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let divElement;
+        function init() {
+            divElement = document.querySelector('div');
+            document.addEventListener('keydown', showkey);
+        }
+        function showkey(e) {
+            let msg = "";
+            msg += "event.key: " + e.key + "<br>";
+            msg += "event.code: " + e.code + "<br>";
+            msg += "event.charCode: " + e.charCode + "<br>";
+            divElement.innerHTML = divElement.innerHTML + msg;
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <h2>KeyBoard Event</h2>
+    <div></div>
+</body>
+</html>

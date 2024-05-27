@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.ondblclick=function(){
+            let color="rgb(";
+            let r=Math.random()*256;
+            let g=Math.random()*256;
+            let b=Math.random()*256;
+            color=color+r+","+g+","+b+")";
+            console.log(color);
+            document.body.style.backgroundColor=color;
+        }
+    </script>
+</head>
+<body>
+    <h3>랜덤배경색</h3>
+</body>
+</html>
