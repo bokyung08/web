@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 닫기</title>
+    <script>
+        let newWin=null;
+        function load(URL){
+            newWin=window.open(URL,"mywin");
+        }
+        function closeNewWindow(){
+            if(newWin=null||newWin.closed)
+            return;
+            else
+            newWin.close();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

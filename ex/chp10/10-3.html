@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout()</title>
+</head>
+<body>
+    <h3>setTimeout()</h3>
+    <hr>
+    <img id="img" src="" onmouseover="startTimer(5000)" onmouseout="cancelTimer()">
+    <script>
+        let timerID=null;
+        function startTimer(time){
+            timerID=setTimeeout("load('')",time);
+        }
+        function cancelTimer(){
+            if (timerID!=null){
+                clearTimeout(timerID);
+            }
+        }
+        function load(URL){
+            window.location=URL;
+        }
+    </script>
+</body>
+</html>

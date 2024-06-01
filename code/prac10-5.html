@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aliceblue;
+            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        let div;
+        function init(){
+            div=document.querySelector("div");
+            setInterval(showTime,1000);
+        }
+        function showTime(){
+            let now=new Date();
+            let h = now.getHours();
+            let m = now.getMinutes();
+            let s = now.getSeconds();
+            div.textContent = h + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+        }
+    </script>
+</head>
+<body onload="init();">
+    <h2>div 태그에 시계</h2>
+    <hr>
+    <div>
+
+    </div>
+</body>
+</html>
