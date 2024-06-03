@@ -17,7 +17,7 @@
             if(time!=null){
                 clearInterval(time);
                 time=null;
-                document.getElementsById("clock").style.color="gray";
+                document.getElementById("clock").style.color="gray";
             }
             else{
                 time=setInterval("outtime(clock)",100);
@@ -31,7 +31,7 @@
         }
         function outtime(e){
             var date=new Date();
-            e.innerHTML=date.toLocateTimeString();
+            e.innerHTML=date.toLocaleTimeString();
         }
     </script>
 </head>
