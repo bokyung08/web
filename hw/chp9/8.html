@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이벤트 객체의 target</title>
     <script>
-        var sw=0;
-        function init(){
-            var liArray=document.getElemenByTagName("li");
-            for (var i=0;i<liArray.length;i++){
-                liArray.onclick=click;
+        function init() {
+            var liArray = document.getElementsByTagName("li");
+            for (var i = 0; i < liArray.length; i++) {
+                liArray[i].onclick = click;
             }
-            function click(e){
+
+            function click(e) {
                 reset();
-                e.target.style.fontSize="1.3em";
+                e.target.style.fontSize = "1.3em";
             }
-            function reset(){
-                for(var i=0;i<liArray.length;++i){
-                    liArray[i].style.fontSize="1em";
+
+            function reset() {
+                for (var i = 0; i < liArray.length; ++i) {
+                    liArray[i].style.fontSize = "1em";
                 }
             }
         }
+
+        window.onload = init;
     </script>
 </head>
 <body>

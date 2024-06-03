@@ -6,13 +6,13 @@
     <title>라디오 버튼과 이미지 출력</title>
     <script>
         function drawImage(){
-            var found=null;
-            var fruit=document.getElementByName("fruit");
-            var img=document.getElementById("fruitimg");
-            for (var i=0;i<fruit.length;i++){
-                if (fruit[i].checked==true){
-                    found=fruit;
-                    img.src="media/"+found.value+".png";
+            var found = null;
+            var fruits = document.getElementsByName("fruit");
+            var img = document.getElementById("fruitimage");
+            for (var i = 0; i < fruits.length; i++){
+                if (fruits[i].checked){
+                    found = fruits[i];
+                    img.src = "media/" + found.value + ".png";
                 }
             }
         }

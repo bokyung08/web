@@ -11,23 +11,22 @@
     <p>
         휠위로 굴리면 축소, 아래로 굴리면 확대 
     </p>
-    <img id="img" src="media/apple.png" onwheel="wheel(event)" width="100px" height="100px">
+    <img id="img" src="media/apple.png" width="100px" height="100px">
     <script>
-        var size=100;
-        function wheel(e){
-            if(e.WheelDelta<0){
-                size=size-(size*0.05);
-                if (size<0){
-                size=0;
+        var size = 100;
+        function wheel(e) {
+            if (e.deltaY > 0) {
+                size = size - (size * 0.05);
+                if (size < 0) {
+                    size = 0;
+                }
+            } else {
+                size = size + (size * 0.05);
             }
-            }
-            
-            else{
-                size=size+(size*0.05);
-            }
-            document.getElementById("img").style.width=size+"px";
-            document.getElementById("img").style.height=size+"px";
+            document.getElementById("img").style.width = size + "px";
+            document.getElementById("img").style.height = size + "px";
         }
+        document.getElementById("img").addEventListener("wheel", wheel);
     </script>
 </body>
 </html>
